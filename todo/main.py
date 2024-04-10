@@ -1,17 +1,14 @@
 enterTodoPrompt = "Enter a TODO: "
+doneCreatingTodos = "Are you finished creating TODOs? "
 
 todos = []
 
-todo1 = input(enterTodoPrompt)
-todos.append(todo1)
-print("Thank you!")
-todo2 = input(enterTodoPrompt)
-todos.append(todo2)
-print("Thank you!")
-todo3 = input(enterTodoPrompt)
-todos.append(todo3)
-print("Thank you!")
+isDone = "No"
 
-print("Current TODOS - ", todos)
-
+while isDone != "Yes":
+    todo = input(enterTodoPrompt)
+    todos.append(todo)
+    print("Current TODOS - ", todos)
+    isDone = input(doneCreatingTodos)
+    isDone = isDone.capitalize()
 
