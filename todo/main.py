@@ -12,7 +12,8 @@ while True:
             todo = input(enterTodoPrompt)
             todos.append(todo)
         case 'show':
-            print("Current TODOS - ", todos)
+            for item in todos:
+                print(item)
         case 'exit':
             break
 
