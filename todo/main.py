@@ -5,7 +5,9 @@ userActionPrompt = "Type add, show, or exit: "
 todos = []
 
 while True:
+    
     user_action = input(userActionPrompt)
+    user_action = user_action.strip()
 
     match user_action:
         case 'add':
