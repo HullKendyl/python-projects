@@ -18,7 +18,14 @@ while True:
                 item = item.title()
                 print(item)
         case 'edit':
-            print("Got it!")
+            print(todos)
+            number = int(input("Enter the number of the todo to edit: "))
+            # TODO - If a user enters something other than a number, share it is an unknown command and prompt again
+            existing_todo = todos[number - 1]
+            edited_todo = input("Enter the edit you'd like to make to [" + existing_todo + "]: ")
+            todos[number - 1] = edited_todo
+            print(f"You've successfully updated [{existing_todo}] to [{edited_todo}]")
+            print(todos)
         case 'exit':
             break
         case _:
