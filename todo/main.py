@@ -1,6 +1,6 @@
 enterTodoPrompt = "Enter a TODO: "
 doneCreatingTodos = "Are you finished creating TODOs? "
-userActionPrompt = "Type add, show, or exit: "
+userActionPrompt = "Type add, show, edit, or exit: "
 
 todos = []
 
@@ -17,6 +17,8 @@ while True:
             for item in todos:
                 item = item.title()
                 print(item)
+        case 'edit':
+            print("Got it!")
         case 'exit':
             break
         case _:
