@@ -23,13 +23,14 @@ while True:
             number = int(input("Enter the number of the todo to edit: "))
             # TODO - If a user enters something other than a number, share it is an unknown command and prompt again
             existing_todo = todos[number - 1]
-            edited_todo = input("Enter the edit you'd like to make to [" + existing_todo + "]: ")
+            edited_todo = input(f"Enter the edit you'd like to make to {existing_todo}")
             todos[number - 1] = edited_todo
-            print("You've successfully updated [{existing_todo}] to [{edited_todo}]")
+            print(f"You've successfully updated {existing_todo} to {edited_todo}")
             print(todos)
         case 'complete':
-            completed_todo = int(input("Enter the number of todo you'd like to complete"))
+            completed_todo = int(input("Enter the number of todo you'd like to complete: "))
             todos.pop(completed_todo - 1)
+            print(todos)
         case 'exit':
             break
         case _:
