@@ -14,9 +14,10 @@ while True:
             todo = input(enterTodoPrompt)
             todos.append(todo)
         case 'show':
-            for item in todos:
+            for index, item in enumerate(todos):
                 item = item.title()
-                print(item)
+                index = index + 1
+                print(index, "-", item)
         case 'edit':
             print(todos)
             number = int(input("Enter the number of the todo to edit: "))
