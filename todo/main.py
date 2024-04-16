@@ -1,6 +1,6 @@
 enterTodoPrompt = "Enter a TODO: "
 doneCreatingTodos = "Are you finished creating TODOs? "
-userActionPrompt = "Type add, show, edit, or exit: "
+userActionPrompt = "Type add, show, edit, complete, or exit: "
 
 todos = []
 
@@ -25,8 +25,11 @@ while True:
             existing_todo = todos[number - 1]
             edited_todo = input("Enter the edit you'd like to make to [" + existing_todo + "]: ")
             todos[number - 1] = edited_todo
-            print(f"You've successfully updated [{existing_todo}] to [{edited_todo}]")
+            print("You've successfully updated [{existing_todo}] to [{edited_todo}]")
             print(todos)
+        case 'complete':
+            completed_todo = int(input("Enter the number of todo you'd like to complete"))
+            todos.pop(completed_todo - 1)
         case 'exit':
             break
         case _:
